@@ -115,8 +115,8 @@ public class MaxFeeTxHandler {
 
     // Helper method to calculate the transaction fee
     private double getTransactionFee(Transaction tx) {
-        double inputSum = 0;
-        double outputSum = 0;
+        double inputSum = 0.0;
+        double outputSum = 0.0;
 
         for (Transaction.Input input : tx.getInputs()) {
             UTXO utxo = new UTXO(input.prevTxHash, input.outputIndex);
